@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="zxx"> <!--<![endif]-->
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Art Sound Group">
+	
+	<!--Title-->
+    <title>Christian Unity</title>
+	
+	<!--Seo Tags-->
+	<meta name="robots" content="index, follow"> 
+
+	<!--Favicon-->
+	<!-- <link rel="shortcut icon" href="assets/img/favicon.ico" type="image/x-icon"> -->
+	
+	<!-- Apple Icon -->
+    <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+		
+	<!--Fonts-->
+	<link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
+	<link rel="stylesheet" href="assets/fonts/font-awesome.css" >
+	
+	<!--General Style-->
+	<link rel="stylesheet" href="assets/bootstrap/css/bootstrap.css" type="text/css">
+    <link rel="stylesheet" href="assets/css/magnific-popup.css" type="text/css">
+    <link rel="stylesheet" href="assets/css/trackpad-scroll-emulator.css" type="text/css">
+    <link rel="stylesheet" href="assets/css/style.css" type="text/css">
+	<link rel="stylesheet" href="assets/css/vegas.min.css" type="text/css">
+	<link rel="stylesheet" href="assets/css/mailform.css" type="text/css">
+	
+	<!--Color Style-->
+	<link rel="stylesheet" href="assets/css/colors/light-blue.css" type="text/css">
+	
+</head>
+
+<body>
+
+<!-- Loading -->
+	<div id="preload">
+		<div id="preload-content">
+			<div class="preload-spinner">
+			<div class="loading-logo-wraper">
+			<img src="assets/img/logo.png" alt="">
+			</div>
+				<div class="tp-loader spinner"></div>
+			</div>
+		</div>
+	</div>
+
+<!-- Content -->	
+<div id="outer-wrapper" class="animate translate-z-in">
+    <div id="inner-wrapper">
+        <div id="table-wrapper">
+            <div class="container center">
+                <div id="row-content">
+                    <div id="content-wrapper">
+                        <div id="content" class="animate translate-z-in animation-time-2s delay-1-5s">
+						  <!-- Logo -->
+						  <!-- <header><img src="assets/img/logo.png" class="animate fade-in animation-time-3s" alt=""></header> -->
+							<h1>Christian Unity</h1>
+							<h3>Ứng dụng mạng xã hội cơ đốc, kết nối và tăng trưởng.</h3>
+                        </div>
+                    </div>
+                </div>
+				<!--
+                <div id="row-footer">
+                    <footer>
+                        <div class="social">
+                            <a href="#"><span class="fa fa-envelope  fade-in" title="Email"></span></a>
+							<a href="#"><span class="fa fa-facebook  fade-in" title="Facebook"></span></a>
+                            <a href="#"><span class="fa fa-twitter  fade-in" title="Twitter"></span></a>
+                            <a href="#"><span class="fa fa-instagram  fade-in" title="Instagram"></span></a>
+                            <a href="#"><span class="fa fa-google-plus  fade-in" title="Google Plus"></span></a>
+                        </div>
+                    </footer>
+                </div>-->
+            </div>
+        </div>
+
+		<!-- Background -->
+        <div class="background-wrapper2 overlay has-vignette">
+             <div class="bg-transfer opacity-80"><img src="assets/img/bg1.jpg" alt=""></div>
+			 <div id="art-clouds"></div>
+        </div>
+    </div>
+</div>
+
+<!-- Subscribe -->
+<div class="modal fade" id="modal-subscribe">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h2 id="modal-subscribe-label">Đăng ký tham dự</h2>
+				<p>
+				Vui lòng nhập số điện thoại của bạn để nhận được giúp đỡ.
+                </p>
+            </div>
+            <div class="modal-body">
+                <div class="contactForm">
+					<form name="submit-to-google-sheet" class="mailform row">
+						<fieldset>
+							<div class="cf_response"></div>
+
+							<div class="col-md-8 col-sm-8">
+								<label> 
+									<input type="text" name="phone" id="cf_phone" placeholder="Số điện thoại của bạn" value="" tabindex="1" required> 
+								</label>
+							</div> 
+			
+							<div class="col-md-4 col-sm-4 text-center">
+								<button class="button rounded" type="submit"><div id="loading">Đăng ký</div></button>
+							</div>
+						</fieldset>
+					</form>
+				</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="backdrop"></div>
+
+<!--Java Scripts-->
+<script type="text/javascript" src="assets/js/jquery-2.2.4.min.js"></script>
+<script type="text/javascript" src="assets/bootstrap/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="assets/js/jquery.plugin.min.js"></script>
+<script type="text/javascript" src="assets/js/custom.js"></script>
+<script type="text/javascript" src="assets/js/clouds.js"></script>
+<script>
+	const scriptURL = 'https://script.google.com/macros/s/AKfycbyGrCipmyK9xFMhqBNHKwTtM7eG_zbHSB-lO2NH16rc2bEhKw_B/exec'
+	const form = document.forms['submit-to-google-sheet']
+  
+	form.addEventListener('submit', e => {
+	  e.preventDefault()
+	  $('#loading').html('Đang gửi ...')
+	  fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+		.then(function(response) {
+			alert('Cám ơn bạn đã đăng ký tham dự chương trình')
+			$('#loading').html('Đăng ký')
+			$('#modal-subscribe').modal('hide');
+		})
+		.catch(error => console.error('Error!', error.message))
+	})
+  </script>
+	
+</body>
