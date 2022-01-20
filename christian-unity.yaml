@@ -1,0 +1,17 @@
+alerts:
+- rule: DEPLOYMENT_FAILED
+- rule: DOMAIN_FAILED
+domains:
+- domain: christianvn.com
+  type: PRIMARY
+name: christian-unity
+region: sgp
+static_sites:
+- environment_slug: html
+  github:
+    branch: main
+    repo: diepnghitinh/christian_unity_statics
+  name: christian-unity-statics
+  routes:
+  - path: /
+  source_dir: /
